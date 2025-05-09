@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "segbench"
+version = "0.1.0"
+authors = [{ name = "Shima Nabiee", email = "snabiee@uci.edu" }]
+description = "Benchmarking suite for semantic-segmentation models with Hybrid U-Net"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = [
+  "tensorflow>=2.15",
+  "opencv-python",
+  "numpy",
+  "matplotlib",
+  "tqdm",
+]
+
+[project.scripts]
+segbench = "segbench.cli:main"
