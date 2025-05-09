@@ -1,22 +1,10 @@
-**Writing README content**
-
-I need to craft a README in markdown format, not as a file. The user might want a more thorough, research-oriented section with a license notice. Since the user was a UCI grad student, I'll probably use the BSD 3-Clause, a common open-source license at UC. I should mention the SWIN transformer model, how to generate images, and embed sample output images using placeholders. Oh, but I can't easily embed images from Python code directly. I'll just reference the image paths instead. I'll double-check the notebook outputs.
-
-
-Thought for 27 seconds
-
-
-Here is a README draft you can paste straight into the repo.
-I avoided bold text per your style rule but kept Markdown headings.
-
-```markdown
 Hybrid U‑Net Benchmark Suite
 ===========================
 
 Hybrid U‑Net extends the classic encoder–decoder with multi‑scale feature fusion and achieves state‑of‑the‑art performance on data‑scarce segmentation tasks.  
 This repository accompanies the paper
 
-> Nabiee S. et al., Hybrid U‑Net: A Scale‑Aggregating Encoder–Decoder for Data‑Scarce Semantic Segmentation, Pattern Recognition Letters, 2025.
+> Nabiee S. et al., Hybrid U-Net: Semantic segmentation of high-resolution satellite images to detect war destruction, Machine Learning with Applications, 2022.
 
 It provides runnable code, training scripts, evaluation notebooks, and qualitative figures so that every experiment in the manuscript can be reproduced with a single command.
 
@@ -41,17 +29,7 @@ Models implemented
 
 † The Swin‑Transformer variant is loaded through `timm`.  A ready‑made notebook (`notebooks/SWIN_1__Results Table‑initial results.ipynb`) demonstrates how to fine‑tune it and export weights for the CLI.
 
-Repository layout
------------------
 
-```
-
-segbench/               python package (models, metrics, CLI)
-notebooks/              exploratory and figure‑generation notebooks
-docs/figures/           static PNGs used in this README
-data/                   place your dataset here (images/  masks/)
-
-````
 
 Installation
 ------------
@@ -110,11 +88,15 @@ Those commands write all PNGs into `docs/figures/`, which are embedded above.
 ## Citing this repository
 
 ```
-@article{nabiee2025hybridu,
-  title   = {Hybrid U‑Net: A Scale‑Aggregating Encoder–Decoder for Data‑Scarce Semantic Segmentation},
-  author  = {Shima Nabiee and co‑authors},
-  journal = {Pattern Recognition Letters},
-  year    = {2025}
+@article{NABIEE2022100381,
+title = {Hybrid U-Net: Semantic segmentation of high-resolution satellite images to detect war destruction},
+journal = {Machine Learning with Applications},
+volume = {9},
+year = {2022},
+doi = {https://doi.org/10.1016/j.mlwa.2022.100381},
+url = {https://www.sciencedirect.com/science/article/pii/S2666827022000688},
+author = {Shima Nabiee and Matthew Harding and Jonathan Hersh and Nader Bagherzadeh},
+keywords = {War destruction detection, Semantic segmentation, U-Net, High-resolution satellite images}
 }
 ```
 
@@ -123,7 +105,3 @@ Those commands write all PNGs into `docs/figures/`, which are embedded above.
 Copyright (c) 2025, The Regents of the University of California.
 Released under the BSD 3‑Clause license.  See the `LICENSE` file for the full text.
 
-```
-
-Feel free to tweak language, dataset names, or paths to match your final repo structure.
-```
