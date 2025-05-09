@@ -70,20 +70,8 @@ segbench infer sample.png \
 
 ![qualitative grid](docs/figures/prediction_grid.png)
 
-Zoom‑in heat‑map for Hybrid U‑Net attention
+Zoom‑in heat‑map for Hybrid U‑Net and other models segmentation results.
 
-![heat‑map](docs/figures/hybridu_heatmap.png)
-
-Both images are generated automatically by `notebooks/Visualizing_Predictions.ipynb`.
-
-## Reproducing every figure
-
-```bash
-jupyter nbconvert --execute notebooks/Results\ Table.ipynb
-jupyter nbconvert --execute notebooks/mIoU\ vs\ White\ Pixels‑Copy1.ipynb
-```
-
-Those commands write all PNGs into `docs/figures/`, which are embedded above.
 
 ## Citing this repository
 
